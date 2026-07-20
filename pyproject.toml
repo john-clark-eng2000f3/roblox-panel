@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "roblox-panel"
+version = "0.2.2"
+description = "Terminal dashboard for Roblox Open Cloud stats and server logs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.25.0",
+    "rich>=13.4.0",
+    "click>=8.1.0",
+]
+
+[project.scripts]
+rblx = "roblox_panel.cli:main"
+roblox-panel = "roblox_panel.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
